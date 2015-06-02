@@ -4,7 +4,7 @@ go-circleci is a Go client for the [CircleCI REST API](https://circleci.com/docs
 
 [![Circle CI](https://circleci.com/gh/ryanlower/go-circleci.svg?style=svg&circle-token=ea68f54409368a07d8168c06cf8e7ee583488ced)](https://circleci.com/gh/ryanlower/go-circleci)
 
-**This is WIP. Currently only the `GET /me` endpoint is supported.**
+This is WIP. Currently only the `GET /me` & `GET /project/:username/:reponame` endpoints are supported. I'll fill in other endpoints, and generally clean up this client (see Roadmap) over time. Or, you could open a PR and help :)
 
 ## Usage
 
@@ -19,7 +19,11 @@ client := NewClient("your_api_token")
 You can then call the supported API methods
 
 ```go
+// Get authenticated user
 user := client.Me()
+
+// Get recent builds for ryanlower/go-circleci
+builds := client.RecentBuilds("ryanlower", "go-circleci")
 ```
 
 ## Roadmap
