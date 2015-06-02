@@ -2,6 +2,8 @@
 
 go-circleci is a Go client for the [CircleCI REST API](https://circleci.com/docs/api)
 
+[![Circle CI](https://circleci.com/gh/ryanlower/go-circleci.svg?style=svg&circle-token=ea68f54409368a07d8168c06cf8e7ee583488ced)](https://circleci.com/gh/ryanlower/go-circleci)
+
 **This is WIP. Currently only the `GET /me` endpoint is supported.**
 
 ## Usage
